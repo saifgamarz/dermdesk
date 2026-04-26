@@ -120,7 +120,7 @@ export default function SettingsPage() {
     setInviting(true);
     try {
       const token = crypto.randomUUID();
-      await createInvite({ email: inviteEmail, clinicId: clinic.id, clinicName: clinic.name, role: 'receptionist', used: false, createdAt: Date.now() }, token);
+      await createInvite({ email: inviteEmail, clinicId: clinic.id, clinicName: clinic.name, role: 'Receptionist', used: false, createdAt: Date.now() }, token);
       const link = `${window.location.origin}/invite/${token}`;
       setInviteLink(link);
       toast.success('Invite created!');
